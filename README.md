@@ -71,7 +71,22 @@ print(images)
 # ['lpips/1.jpg', 'lpips/2.jpg', 'lpips/3.jpg', 'lpips/4.jpg', 'lpips/5.jpg', 'lpips/6.jpg', 'lpips/7.jpg', 'lpips/8.jpg', 'lpips/9.jpg']
 print(lpips_clustering(images))  # -1 means noises, the same as that in sklearn
 # [0, 0, 0, 1, 1, -1, -1, -1, -1]
-```
+```e
+
+```python
+#!/bin/zsh
+
+# Counter to keep track of the numbering
+counter=1
+
+# Loop through all .jpg files in the current directory
+for file in *.jpg; do
+  # Rename each file to the format counter.jpg
+  mv "$file" "$counter.jpg"
+  # Increment the counter
+  ((counter++))
+done
+```e
 
 ### Contrastive Character Image Pretraining
 
